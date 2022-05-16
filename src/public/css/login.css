@@ -43,6 +43,28 @@ label{
   
   
 }  
+#loga{  
+    width: 130px;  
+    height: 30px;  
+    border: none;  
+    text-align: center;
+    border-radius: 17px;  
+    padding-left: 7px;
+    margin-left: 5px;  
+    color: blue;  
+    background-color: aqua;
+  }  
+  #logb{  
+    width: 130px;  
+    height: 30px;  
+    border: none;  
+    text-align: center;
+    border-radius: 17px;
+    margin-left: 20px;  
+    padding-left: 7px;  
+    color: blue;  
+    background-color: aqua;
+  }  
 span{  
     color: white;  
     font-size: 17px;  
