@@ -29,6 +29,16 @@
           <img src="./images/" alt="">
           <a class="navbar-brand" href="/archive"><i class="fa fa-archive"></i>&nbsp;Archive</a>
         </li>
+        <li class="dropdown nav-item ">
+            
+          <a href="javascript:void(0)" class="dropbtn navbar-brand"><i class="fa fa-user-plus"></i>&nbsp;Admin</a>
+          <div class="dropdown-content">
+            <a href="/users/signup">Add User</a>
+            <a href="#">Add Job/Offer</a>
+            <a href="#">Remove User</a>
+            <a href="#">Remove Job/Offer</a>
+          </div>
+        </li>
       </ul>
        
         <div><i class="fa fa-calendar-check-o" style="font-size:24px;color:white"></i>&nbsp;<span id="datetime"> </span></div>
@@ -43,7 +53,7 @@
 setInterval(refreshTime, 1000);
 
 </script>
-<a class="profile-text"><i class="fa fa-user-circle-o" style="font-size:24px;color:white"></i> <%= user.name %></a>
+<a class="profile-text"><i class="fa fa-user-circle-o" style="font-size:24px;color:white">&nbsp;<%= user.name %></i> </a>
 <a href="/users/logout" class="btn  my-2 my-sm-0" type="submit"><i class="fa fa-power-off" style="font-size:24px; color: white;"></i></a>
       </form>
     </div>
