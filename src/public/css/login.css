@@ -47,6 +47,7 @@ label{
     width: 130px;  
     height: 30px;  
     border: none;  
+    float: left;
     text-align: center;
     border-radius: 17px;  
     padding-left: 7px;
@@ -61,7 +62,8 @@ label{
     text-align: center;
     border-radius: 17px;
     margin-left: 20px;  
-    padding-left: 7px;  
+    padding-left: 7px;
+    float: right;  
     color: blue;  
     background-color: white;
   }  
