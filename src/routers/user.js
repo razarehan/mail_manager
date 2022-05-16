@@ -14,18 +14,10 @@ router.get('/users/signup', (req, res) => {
   res.render('register.ejs')
 })
 
+// UI Remove User
 router.get('/users/remove', (req, res) => {
   res.render('remove_user.ejs')
 })
-
-router.get('/users/addOffer', (req, res) => {
-  res.render('Add_offer.ejs')
-})
-
-router.get('/users/removeOffer', (req, res) => {
-  res.render('remove_offer.ejs')
-})
-
 
 // signup
 router.post('/users', async (req, res) => {
