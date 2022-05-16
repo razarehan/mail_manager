@@ -12,10 +12,11 @@ app.use(bodyParser.json())
 app.use(express.urlencoded({extended: false}))
 app.use(cookieParser())
 app.use(express.static(__dirname + '/public'));
+app.set("view-engine", "ejs")
+
 app.use(userRouter)
 app.use(dashboardRouter)
 
-app.set("view-engine", "ejs")
 
 app.all('/*', (req, res) => {
   res.send('<h1>404 Page Not Found</h1>')
