@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs today</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/jobs_today.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <img id="logo" src="./images/logomatrimony.webp">
+      <a class="navbar-brand" href="/dashboard"><i class="fa fa-dashboard"></i>&nbsp;Dashboard</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="/jobs_today"><i class="fa fa-clone"></i>&nbsp;Jobs Today <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="./master_list"><i class="fa fa-list"></i>&nbsp;Master List</a>
+        </li>
+        <li class="nav-item">
+          <img src="./images/" alt="">
+          <a class="navbar-brand" href="/archive"><i class="fa fa-archive"></i>&nbsp;Archive</a>
+        </li>
+      </ul>
+       
+        <div><i class="fa fa-calendar-check-o" style="font-size:24px;color:white"></i>&nbsp;<span id="datetime"> </span></div>
+         <script>    
+        function refreshTime() {
+        const timeDisplay = document.getElementById("datetime");
+        const dateString = new Date().toGMTString();
+        //const formattedString = dateString.replace(", ", " - ");
+        //timeDisplay.textContent = formattedString;
+        timeDisplay.textContent = dateString;
+}
+setInterval(refreshTime, 1000);
+</script>
+<a class="profile-text"><i class="fa fa-user-circle-o" style="font-size:24px;color:white"></i> Profile</a>
+<a href="/users/logout" class="btn  my-2 my-sm-0" type="submit"><i class="fa fa-power-off" style="font-size:24px; color: white;"></i></a>
+      </form>
+    </div>
+  </nav>
+
+      <nav style="margin-top: 10px;">
+        <div class="jobs-today-nav-bar"><strong> Archive</strong></div>
+        <div class="filter-nav-bar"><strong><i class="fa fa-filter" aria-hidden="true" style="color:#007bff"></i> Filter By :</strong></div>  
+        <nav class="navbar-light bg-white" style="float:left;">
+          <i class="fa fa-square" style="font-size:24px;color:yellow;float: right; margin-left: 10px;"></i>
+          <i class="fa fa-square" style="font-size:24px;color:red;float: right; margin-left: 10px;"></i>
+          <i class="fa fa-square" style="font-size:24px;color:orange;float: right; margin-left: 10px;"></i>
+          <i class="fa fa-square" style="font-size:24px;color:green;float: right; margin-left: 10px;"></i>
+        </nav>
+        <div class="caution-class">
+          <i class="fa fa-warning" style="color:red;"></i>
+          3 Out of 8 Jobs need attention  </div>   
+         <div class="cooked-send"><strong>Cooked/Send :</strong> 38,4345 / 2,67222</div> 
+         <div class="search-container">
+          <form class="search-form"action="">
+            <input type="text" placeholder="Search by job name,id" name="search">
+            <button type="submit" class="button-search"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </nav> 
+      <table class="jobs-today-table"  style="width: 97.5%;margin-left:15px;">
+          <tr>
+            <th  rowspan="2" >Job ID</th>
+            <th  rowspan="2" >Type/Job Name()</th>
+            <th  rowspan="2" >Medium</th>
+            <th class="header" colspan="3" >Cooking</th>
+            <th class="header" colspan="3" >Sending</th>
+            <th class="header" colspan="2"></i>Count</th>
+            <th rowspan="2" >Job Status</th>
+            <th rowspan="2" >Archive</th>
+          </tr>
+          <tr>
+            <th  scope="col" >Start time</th>
+            <th  scope="col" >End time</th>
+            <th  scope="col" >Duration</th>
+            <th  scope="col" >Start time</th>
+            <th  scope="col" >End time</th>
+            <th  scope="col" >Duration</th>
+            <th  scope="col" >Cooked</th>
+            <th  scope="col" >Send</th>
+
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>Who Viewed me<br>Daily</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td>MLFM<br>Daily</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>2:00 <br> <strong >Actual:</strong><br>3:00</td>
+            <td>Expected<br>23:09<br><strong style="color: green;">ETC<br>22-04-2022 <br>00:30</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>77</td>
+            <td>PM Suggested<br>Mailer</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td>DMV YTBY</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>DMV-Extended</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>Who Viewed me<br>Daily</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>Who Viewed me<br>Daily</td>
+            <td> <i class="fa fa-envelope"></i>Medium</td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>13:00</td>
+            <td>Expected<br>17:59<br><strong style="color: green;">Actual:</strong></td>
+            <td>Duration:<br>3:29hrs<br><strong style="color: green;">Actual <br>Expected <br>Count <br>reached</strong></td>
+            <td>Sheduled:<br>14:00 <br> <strong >Actual:</strong><br>-</td>
+            <td>Expected:<br>17:59<br><strong>Actual:<br>-</strong></td>
+            <td>Expected:<br><strong></strong>3:25 hrs<br>Actual:<br>-</strong></td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>5,77,547</td>
+            <td>Expected<br>5,77,547<br><strong>Actual:</strong><br>-</td>
+            <td><strong>Cooking: <br>- <br>Sending:<br>-</strong></td>
+            <td>---</td>
+          </tr>
+      </table>
+</body>
+</html>
