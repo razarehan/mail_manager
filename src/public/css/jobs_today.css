@@ -1,0 +1,101 @@
+#datetime{
+  color: white;
+  margin-right: 60px;
+}
+
+#s2u{
+  float: left;
+}
+#u2u{
+  float: left;
+}
+
+th{
+  text-align:center;
+  background-color:rgb(130, 248, 248)
+}
+.Row_head{
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+.total{
+  background-color: rgb(77, 241, 241);
+}
+th,td,tr{
+  border-left: 2px solid rgb(41, 243, 243);
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
+}
+.header{
+  border-bottom: 2px solid white;
+}
+table{
+  border: 2px solid rgb(41, 243, 243);
+  margin: 0%;
+  padding: 0%;
+}
+.job-id{
+margin-bottom: 10px;
+}
+
+.profile-icon{
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  border-color: 2px solid white;
+}
+.profile-text{
+  margin-right: 40px;
+  color: white;
+  font-style: italic;
+}
+#logo{
+  width: 70px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+
+
+.caution-class{
+  float: left;
+  margin-left: 5%;
+  color: red;
+  border: 2px solid ;
+  border-radius: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.jobs-today-nav-bar{
+  float: left;
+  margin-left: 1%;
+}
+.filter-nav-bar{
+  float: left;
+  margin-left: 2%;
+}
+.cooked-send{
+  float: left;
+  margin-left: 10px;
+}
+.search-container{
+  float: right;
+  margin-right: 20px;
+}
+.button-search{
+  margin-left: -2%;
+  background-color:#007bff;
+}
+.jobs-today-table{
+  margin-top:50px;
+}
+th,tr{
+  border-left: 2px solid rgb(41, 243, 243);
+  margin: 0%;
+  padding: 0%;
+  text-align: center;
+  height: 40px;
+}
