@@ -12,17 +12,17 @@ body
     margin: auto;  
     margin: 20 0 0 450px;  
     padding: 80px;  
-    background: #23463f;  
+    background: #306eff;  
     border-radius: 15px ;  
     margin-top: 70px;
 }  
 h2{  
     text-align: center;  
-    color: #277582;  
+    color: white;  
     padding: 20px;  
 }  
 label{  
-    color: #08ffd1;  
+    color: white;  
     font-size: 17px;  
 }  
 .Uname{  
@@ -39,7 +39,7 @@ label{
     border-radius: 17px;  
     padding-left: 7px;  
     color: blue;  
-    background-color: aqua;
+    background-color: white;
   
   
 }  
@@ -52,7 +52,7 @@ label{
     padding-left: 7px;
     margin-left: 5px;  
     color: blue;  
-    background-color: aqua;
+    background-color: white;
   }  
   #logb{  
     width: 130px;  
@@ -63,7 +63,7 @@ label{
     margin-left: 20px;  
     padding-left: 7px;  
     color: blue;  
-    background-color: aqua;
+    background-color: white;
   }  
 span{  
     color: white;  
