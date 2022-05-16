@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs today</title>
+    <title>Archive</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/jobs_today.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,6 +41,7 @@
         timeDisplay.textContent = dateString;
 }
 setInterval(refreshTime, 1000);
+
 </script>
 <a class="profile-text"><i class="fa fa-user-circle-o" style="font-size:24px;color:white"></i> <%= user.name %></a>
 <a href="/users/logout" class="btn  my-2 my-sm-0" type="submit"><i class="fa fa-power-off" style="font-size:24px; color: white;"></i></a>
@@ -49,14 +50,16 @@ setInterval(refreshTime, 1000);
   </nav>
 
       <nav style="margin-top: 10px;">
-        <div class="jobs-today-nav-bar"><strong> Archive</strong></div>
-        <div class="filter-nav-bar"><strong><i class="fa fa-filter" aria-hidden="true" style="color:#007bff"></i> Filter By :</strong></div>  
-        <nav class="navbar-light bg-white" style="float:left;">
-          <i class="fa fa-square" style="font-size:24px;color:yellow;float: right; margin-left: 10px;"></i>
-          <i class="fa fa-square" style="font-size:24px;color:red;float: right; margin-left: 10px;"></i>
-          <i class="fa fa-square" style="font-size:24px;color:orange;float: right; margin-left: 10px;"></i>
-          <i class="fa fa-square" style="font-size:24px;color:green;float: right; margin-left: 10px;"></i>
-        </nav>
+        <div class="jobs-today-nav-bar"><strong> Archive :</strong></div>
+        <div class="filter-nav-bar"><strong><i class="fa fa-calendar-check-o" aria-hidden="true" style="color:#007bff"></i> 
+            <div class="search-container">
+                <form class="search-form"action="">
+                 &nbsp; <input type="date" placeholder="27/04/2022" name="search" id="datesearch">
+                </form>
+                <p id="day"></p>
+              </div>
+        </strong></div>  
+       
         <div class="caution-class">
           <i class="fa fa-warning" style="color:red;"></i>
           3 Out of 8 Jobs need attention  </div>   
@@ -196,5 +199,12 @@ setInterval(refreshTime, 1000);
             <td>---</td>
           </tr>
       </table>
+
+      <script>
+          const date = document.getElementById('datesearch');
+          date.addEventListener
+          const day = ["Sunday","Monday","TuesDay","WednesDay",]
+          document.getElementById('day').innerHTML = day[(new Date(date)).getDay()];
+      </script>
 </body>
 </html>
