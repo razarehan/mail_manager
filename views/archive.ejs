@@ -71,14 +71,12 @@ setInterval(refreshTime, 1000);
                 <form class="search-form"action="">
                  &nbsp; <input type="date" placeholder="27/04/2022" name="search" id="datesearch">
                 </form>
-                <p id="day"></p>
+               
               </div>
         </strong></div>  
        
-        <div class="caution-class">
-          <i class="fa fa-warning" style="color:red;"></i>
-          3 Out of 8 Jobs need attention  </div>   
-         <div class="cooked-send"><strong>Cooked/Send :</strong> 38,4345 / 2,67222</div> 
+          
+         <div class="cooked-send"><strong> (WednesDay) (9) or&nbsp;Cooked/Send :</strong> 38,4345 / 2,67222</div> 
          <div class="search-container">
           <form class="search-form"action="">
             <input type="text" placeholder="Search by job name,id" name="search">
@@ -219,7 +217,7 @@ setInterval(refreshTime, 1000);
           const date = document.getElementById('datesearch');
           date.addEventListener
           const day = ["Sunday","Monday","TuesDay","WednesDay",]
-          document.getElementById('day').innerHTML = day[(new Date(date)).getDay()];
+          // document.getElementById('day').innerHTML = day[(new Date(date)).getDay()];
       </script>
 </body>
 </html>

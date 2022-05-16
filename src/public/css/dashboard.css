@@ -12,7 +12,7 @@
 
 th{
     text-align:center;
-    background-color:rgb(130, 248, 248)
+    background-color:#afdcec;
 }
 .Row_head{
     text-align: center;
@@ -21,16 +21,16 @@ tr:nth-child(even) {
     background-color: #D6EEEE;
   }
 .total{
-    background-color: rgb(77, 241, 241);
+    background-color: #afdcec;
 }
 th,td,tr{
-    border-left: 2px solid rgb(41, 243, 243);
+    border-left: 2px solid #66bbda;
     margin: 0%;
     padding: 0%;
     text-align: center;
 }
 table{
-    border: 2px solid rgb(41, 243, 243);
+    border: 2px solid  #66bbda;
     margin: 0%;
     padding: 0%;
 }
