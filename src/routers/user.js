@@ -10,13 +10,17 @@ router.get('/', (req, res) => {
 })
 
 // UI Register
-router.get('/users/signup', (req, res) => {
-  res.render('register.ejs')
+router.get('/users/signup', auth, (req, res) => {
+  if(req.user.email.includes('@admin')) {
+    res.render('register.ejs')
+  }
 })
 
 // UI Remove User
-router.get('/users/remove', (req, res) => {
-  res.render('remove_user.ejs')
+router.get('/users/remove', auth, (req, res) => {
+  if(req.user.email.includes('@admin')) {
+    res.render('remove_user.ejs')
+  }
 })
 
 // signup
@@ -24,7 +28,6 @@ router.post('/users', async (req, res) => {
   const user = new User(req.body)
   try {
     await user.save()
-    res.redirect('/')
     res.status(201).send(user)
   }
   catch(e) {
@@ -94,7 +97,7 @@ router.get('/users/me', auth, async (req, res) => {
 // update account
 router.patch('/users/me', auth, async (req, res) => {
 
-  const onlyUpdates = ['name', 'password']
+  const onlyUpdates = ['password']
   const isAllowed = Object.keys(req.body).every((key) => {
     return onlyUpdates.includes(key)
   })
@@ -119,14 +122,14 @@ router.patch('/users/me', auth, async (req, res) => {
 })
 
 // delete profile
-router.delete('/users/me', auth, async (req, res) => {
-  try {
-    await req.user.remove()
-    res.send(req.user)
-  }
-  catch(e) {
-    res.status(500).send()
-  }
-})
+// router.delete('/users/me', auth, async (req, res) => {
+//   try {
+//     await req.user.remove()
+//     res.send(req.user)
+//   }
+//   catch(e) {
+//     res.status(500).send()
+//   }
+// })
 
 module.exports = router
