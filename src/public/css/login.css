@@ -12,7 +12,7 @@ body
     margin: auto;  
     margin: 20 0 0 450px;  
     padding: 80px;  
-    background: #306eff;  
+    background: #4867ad;  
     border-radius: 15px ;  
     margin-top: 70px;
 }  
@@ -49,6 +49,7 @@ label{
     border: none;  
     float: left;
     text-align: center;
+    text-decoration: none;
     border-radius: 17px;  
     padding-left: 7px;
     margin-left: 5px;  
