@@ -6,7 +6,11 @@ const router = new express.Router()
 
 // UI Login
 router.get('/', (req, res) => {
-  res.render('login.ejs')
+  if(req.cookies.token) {
+    res.redirect('/dashboard')
+  }
+  res.render('login.ejs', { msg: '' })
+  // res.render('/')
 })
 
 // UI Register
@@ -38,7 +42,7 @@ router.post('/users', async (req, res) => {
 })
 
 // login
-router.post('/users/login', async (req, res) => {
+router.post('/', async (req, res) => {
   try{
     const user = await User.findByCredentials(req.body.email, req.body.password)
     const token = await user.generateAuthToken()
@@ -50,8 +54,9 @@ router.post('/users/login', async (req, res) => {
   }
   catch(e) {
     console.log(e);
-    return res.redirect('/')
-    res.status(400).send({ message: "Invalid login" })
+    res.render('login.ejs', { msg: 'Email or Password not matched' })
+    // return res.redirect('/')
+    // res.status(400).send({ message: "Invalid login" })
   }
 })
 

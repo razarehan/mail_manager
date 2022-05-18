@@ -36,10 +36,13 @@
 
 
 <body>
-
     <div class="login">
         <h2>Login Page</h2><br>
-        <form id="login" method="post" action="/users/login">
+        <% if (msg != '') { %>
+            <div class="alert alert-danger"><%= msg %></div>
+        <% } %>
+        
+        <form id="login" method="post" action="/">
             <label>Email ID</label>
             <input type="email" name="email" id="email" class="Uname" placeholder="Enter Email Id">
             <br><br>
@@ -49,8 +52,8 @@
             <input type="checkbox" id="check">
             <span>Remember me</span> <a href="#" style="color: white;"> ForgotPassword</a> <br><br>
             <input type="submit" id="log" value="Login">
-
         </form>
+        <script src="/js/login.js"></script>
     </div>
 </body>
 

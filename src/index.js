@@ -4,16 +4,17 @@ const userRouter = require('./routers/user')
 const dashboardRouter = require('./routers/dashboard')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const flash = require('connect-flash')
 
 const app = express()
 
 app.use(express.json())
 app.use(bodyParser.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 app.use(express.static(__dirname + '/public'));
 app.set("view-engine", "ejs")
-
+app.use(flash());
 app.use(userRouter)
 app.use(dashboardRouter)
 
