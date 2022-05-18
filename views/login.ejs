@@ -1,25 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" src="./css/login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-    <a href="/users/signup">SignUp</a>
-    <h1>Login Page</h1>
-    <form action="/users/login" method="POST" id="form">
-        <input type="email" name="email" id="email">
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +14,9 @@
 
 
 <body>
+   
     <div class="login">
+        <img id="logo" src="./images/logomatrimony.webp" alt="logo">
         <h2>Login Page</h2><br>
         <% if (msg != '') { %>
             <div class="alert alert-danger"><%= msg %></div>
