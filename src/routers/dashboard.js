@@ -18,12 +18,12 @@ router.get('/master_list', auth, (req, res) => {
 })
 router.get('/admin/addOffer', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('Add_offer.ejs')
+    res.render('Add_offer.ejs', { user: req.user })
   }
 })
 router.get('/admin/removeOffer', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('remove_offer.ejs')
+    res.render('remove_offer.ejs', { user: req.user })
   }
 })
 

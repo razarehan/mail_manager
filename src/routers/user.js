@@ -16,14 +16,14 @@ router.get('/', (req, res) => {
 // UI Register
 router.get('/users/signup', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('register.ejs')
+    res.render('register.ejs', { user: req.user })
   }
 })
 
 // UI Remove User
 router.get('/users/remove', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('remove_user.ejs')
+    res.render('remove_user.ejs', { user: req.user })
   }
 })
 
