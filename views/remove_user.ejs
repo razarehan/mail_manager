@@ -17,7 +17,10 @@
 
     <div class="login">
         <h2>Remove User</h2><br>
-        <form id="login" action="/users" method="POST">
+        <% if (msg != '') { %>
+            <div class="alert alert-danger"><%= msg %></div>
+        <% } %>
+        <form id="login" action="/users/remove" method="POST">
             <label>Remove user Email ID</label>
             <input type="email" name="email" id="email" class="Uname" placeholder="Enter user Email Id">
             <br><br>
@@ -29,6 +32,7 @@
             <a id="loga" href="/dashboard">Cancel</a>
         </form>
     </div>
+    <script src="/js/update.js"></script>
 </body>
 
 </html>

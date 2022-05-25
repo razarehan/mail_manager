@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"  >
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary"  >
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,7 +56,7 @@
     }
     setInterval(refreshTime, 1000);
     </script>
-    <!-- <a href="" class="btn  my-2 my-sm-0" ><i class="fa fa-power-off" style="font-size:24px; color: white;"></i></a> -->
+    <a href="" class="btn  my-2 my-sm-0" ><i class="fa fa-power-off" style="font-size:24px; color: white;"></i></a>
     <div class="dropdown nav-item ">
     <a href="javascript:void(0)" class="dropbtn navbar-brand"><i class="fa fa-user-circle-o" style="font-size:20px;color:white"></i>&nbsp;<%= user.name %></a>
     <div class="dropdown-content">
@@ -66,11 +66,14 @@
     </div>
         
         </div>
-      </nav>
+      </nav> -->
     
     <div class="login">
-        <img id="logo" src="./images/logomatrimony.webp">
+        <img id="logo" src="/images/logomatrimony.webp">
         <h2>Add User</h2><br>
+        <% if (msg != '') { %>
+          <div class="alert alert-danger"><%= msg %></div>
+        <% } %>
         <form id="login" action="/users" method="POST">
             <label>Name</label>
             <input type="text" name="name" class="Uname" id="name" placeholder="Enter Name">
@@ -78,13 +81,14 @@
             <input type="email" name="email" id="email" class="Uname" placeholder="Enter Email Id">
             <label>Password</label>
             <input type="password" name="password" id="cnpassword" class="Uname" placeholder="Enter Password">
-            <label>Confirm-Password</label>
-            <input type="password" name="cnpassword" id="cnpassword" class="Uname" placeholder="Confirm-Password">
+            <!-- <label>Confirm-Password</label>
+            <input type="password" name="cnpassword" id="cnpassword" class="Uname" placeholder="Confirm-Password"> -->
             <br><br><br>
             <a id="loga" href="/dashboard">Cancel</a>
             <input type="submit" id="logb" value="Add">
         </form>
     </div>
+    <script src="/js/update.js"></script>
 </body>
 
 </html>

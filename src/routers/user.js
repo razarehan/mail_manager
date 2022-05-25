@@ -73,10 +73,12 @@ router.get('/users/logout', auth, async (req, res) => {
 })
 
 // logout form all devices
-router.post('/users/logoutall', auth, async (req, res) => {
+router.get('/users/logoutall', auth, async (req, res) => {
+  res.clearCookie('token')
   try {
     req.user.tokens = []
     await req.user.save()
+    res.redirect('/')
     res.send()
   }
   catch(e) {
@@ -132,18 +134,24 @@ router.post('/users/me', auth, async (req, res) => {
 // UI Remove User
 router.get('/users/remove', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('remove_user.ejs', { user: req.user })
+    res.render('remove_user.ejs', { user: req.user, msg: '' })
   }
 })
 // delete profile
-// router.delete('/users/me', auth, async (req, res) => {
-//   try {
-//     await req.user.remove()
-//     res.send(req.user)
-//   }
-//   catch(e) {
-//     res.status(500).send()
-//   }
-// })
+router.post('/users/remove', auth, async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.body.email})
+    if(!user) {
+      return res.render('remove_user.ejs', { user: req.user, msg: 'User Not Found' })
+    }
+    await user.remove()
+    return res.redirect('/dashboard')
+    res.send(req.user)
+  }
+  catch(e) {
+    return res.render('remove_user.ejs', { user: req.user, msg: 'Invalid Input' })
+    res.status(500).send()
+  }
+})
 
 module.exports = router
