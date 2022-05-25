@@ -1,0 +1,95 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';
+    text-align: center;  
+    background-image:url("../images/wp3702772-alai-payuthey-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+.login{  
+    width: 450px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 40px 0 40px 850px;  
+    padding: 80px;  
+    background: rgb(11, 148, 57);  
+    border-radius: 15px ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    /* margin-left: 850px; */
+}  
+h2{  
+    text-align: center;  
+    color: white;  
+    padding: 20px;  
+}  
+label{  
+    color: white;  
+    font-size: 17px;  
+}  
+.Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 5px;  
+    padding-left: 8px;  
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+    background-color: orange;
+  
+  
+}  
+#loga{  
+    width: 130px;  
+    height: 30px;  
+    border: none;  
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 17px;  
+    padding-left: 7px;
+    margin-left: 5px;  
+    color: blue;  
+    background-color: white;
+  }  
+  #logb{  
+    width: 130px;  
+    height: 30px;  
+    border: none;  
+    text-align: center;
+    border-radius: 17px;
+    margin-left: 20px;  
+    padding-left: 7px;
+    float: right;  
+    color: blue;  
+    background-color: white;
+  }  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+ 
+}  
+#logo{
+    width: 70px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.imageset{
+    width: 850px;
+    height: 700px;
+    float: left;
+}
