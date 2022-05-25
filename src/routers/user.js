@@ -34,9 +34,9 @@ router.post('/', async (req, res) => {
 
 
 // UI Sign UP
-router.get('/users/signup', auth, (req, res) => {
+router.get('/users', auth, (req, res) => {
   if(req.user.email.includes('@admin')) {
-    res.render('register.ejs', { user: req.user })
+    res.render('register.ejs', { user: req.user, msg: '' })
   }
 })
 
@@ -49,7 +49,7 @@ router.post('/users', auth, async (req, res) => {
     res.status(201).send(user)
   }
   catch(e) {
-    res.render('register.ejs', { user: req.user })
+    res.render('register.ejs', { user: req.user,  msg: 'Invalid Input' })
     console.log(e);
     res.status(400).send()
   }
